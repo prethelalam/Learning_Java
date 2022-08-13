@@ -82,5 +82,6 @@ public class Main {
 //data types are also known as objects 
 //booleans can only have 2 values: true or false. based on the value of our boolean expression will elicit a certain program to run
 //int, double, boolean, char are primitive data types which are not changable. string is not primitive
+//
 
 
