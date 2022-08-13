@@ -57,10 +57,14 @@ public class Main {
 			// in order to get inputs you have to go to the top of the program and type import java.util.Scanner;
 		Scanner sc = new Scanner(System.in); //all this is saying is that scanner is a data type named sc. the new scanner(system.in) is typing stuff on your keyboard
 		int scanned = sc.nextInt(); //here we are creating a new variable with a data type of a string which is called scanned. and it is going to get the next stream of input from the line above
-								//so sc.next() returns as a string so we can't make it int scanned. if we want the user to input a int then we do sc.nextInt()
+								//so sc.next() returns as a string so we can't make it int scanned. if we want the user to input a int then we do sc.nextInt().
+								//so if we try to type a string here it wont work cause it can't convert the string to an int
+		boolean scanned_in = sc.nextBoolean(); 
+		
 		System.out.println(scanned);
 		// after doing this what happened was we typed hello, and then it printed hello. so basically with sc.next() we were able to input info to the keyboard.
 		// then we stored our input into variable called scanned and printing scanned
+		System.out.println(scanned_in);
 	}
 }
 
