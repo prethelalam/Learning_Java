@@ -45,6 +45,7 @@ public class Main {
 		System.out.println(sum);
 		System.out.println(u);
 		System.out.println(d);
+		System.out.println(z);
 		System.out.println();
 		
 		int a = 56 % 5; //this reminder operation (%) gives the remainder of division
@@ -55,11 +56,11 @@ public class Main {
 		//INPUT & SCANNERS
 			// in order to get inputs you have to go to the top of the program and type import java.util.Scanner;
 		Scanner sc = new Scanner(System.in); //all this is saying is that scanner is a data type named sc. the new scanner(system.in) is typing stuff on your keyboard
-		String scanned = sc.next(); //here we are creating a new variable with a data type of a string which is called scanned. and it is going to get the next stream of input from the line above
-		
+		int scanned = sc.nextInt(); //here we are creating a new variable with a data type of a string which is called scanned. and it is going to get the next stream of input from the line above
+								//so sc.next() returns as a string so we can't make it int scanned. if we want the user to input a int then we do sc.nextInt()
 		System.out.println(scanned);
-		// after doing this what happened was we typed hello, and then it printed hello. so basically with line 57 we were able to input info to the keyboard.
-		// then we stored our input into variable scanned on line 58 and we printed that out using line 60
+		// after doing this what happened was we typed hello, and then it printed hello. so basically with sc.next() we were able to input info to the keyboard.
+		// then we stored our input into variable called scanned and printing scanned
 	}
 }
 
