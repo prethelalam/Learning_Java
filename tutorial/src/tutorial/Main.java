@@ -64,7 +64,6 @@ public class Main {
 		System.out.println(scanned);
 		// after doing this what happened was we typed hello, and then it printed hello. so basically with sc.next() we were able to input info to the keyboard.
 		// then we stored our input into variable called scanned and printing scanned
-		System.out.println(scanned_in);
 	}
 }
 
