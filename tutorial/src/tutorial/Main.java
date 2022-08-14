@@ -10,7 +10,7 @@ public class Main {
 		System.out.println("Hello World!");
 		System.out.println("Hellow world 2"); 
 		System.out.println(); //this is how to print a blank line or a space
-		
+	
 		//VARIABLE AND DATA TYPES
 		int hello_world = 9;
 		double num2 = 5.0;
@@ -56,18 +56,25 @@ public class Main {
 		//INPUT & SCANNERS
 			// in order to get inputs you have to go to the top of the program and type import java.util.Scanner;
 		Scanner sc = new Scanner(System.in); //all this is saying is that scanner is a data type named sc. the new scanner(system.in) is typing stuff on your keyboard
-		double scanned = sc.nextDouble(); //here we are creating a new variable with a data type of a string which is called scanned. and it is going to get the next stream of input from the line above
-								//so sc.next() returns as a string so we can't make it int scanned. if we want the user to input a int then we do sc.nextInt().
-								//so if we try to type a string here it wont work cause it can't convert the string to an int
-								//so if you want to type a double then you do sc.nextDouble() - then you have to put double 
-		boolean scanned_in = sc.nextBoolean(); 
+		String scanned = sc.next(); //here we are creating a new variable with a data type of a string which is called scanned. and it is going to get the next stream of input from the line above
+		int w = Integer.parseInt(scanned); //this converts string scanned into an int. or you can do make the input an int								
+																						//so sc.next() returns as a string so we can't make it int scanned. if we want the user to input a int then we do sc.nextInt().
+																						//so if we try to type a string here it wont work cause it can't convert the string to an int
+																						//so if you want to type a double then you do sc.nextDouble() - then you have to put double 
+																						// when the program is expecting a double (avoiding the crash). 
+																						//so for a String you only do String scanned = sc.next();
+																						//trying to convert the string to an int
+		boolean scanned_in = sc.nextBoolean(); //this is how to insert a boolean 
 		
-		System.out.println(scanned);
-		// after doing this what happened was we typed hello, and then it printed hello. so basically with sc.next() we were able to input info to the keyboard.
-		// then we stored our input into variable called scanned and printing scanned
+		System.out.println(w);
+						// after doing this what happened was we typed hello, and then it printed hello. so basically with sc.next() we were able to input info to the keyboard.
+						// then we stored our input into variable called scanned and printing scanned
 		System.out.println(scanned_in);
 		System.out.println();
-				// so in this case there will be 2 inputs and 2 outputs
+						// so in this case there will be 2 inputs and 2 outputs
+		
+		//CONDITIONS & BOOLEANS
+		
 	}
 }
 
@@ -90,4 +97,8 @@ public class Main {
 //booleans can only have 2 values: true or false. based on the value of our boolean expression will elicit a certain program to run
 //int, double, boolean, char are primitive data types which are not changable. string is not primitive
 
+//INPUTS % SCANNERS
+//lets say you have int x=5 and int y=4 right. then you do the int sum = x +y. this will return as an int. but if you do int x=5 and int y=6 then do double sum = x +y. you will still get 30 but it'll be 30.0 (the value will have a decimal added to it
+//now lets say you have double x=5 and int y =6. then double sum = x +y. you will get the result as a double but like a true double since one of the values is a double
 
+//CONDITIONS & BOOLEANS
