@@ -11,10 +11,11 @@ public class Main {
 		System.out.println("Hellow world 2"); 
 		System.out.println(); //this is how to print a blank line or a space
 	
+		
 		//VARIABLE AND DATA TYPES
 		int hello_world = 9;
 		double num2 = 5.0;
-		boolean b = true;
+		boolean v = true;
 		char c = 'h'; //chars can be any character, whether it be a letter or number. it can only be 1 character. this is not the same as int hello_world = 9;
 		String str = "9"; //String data type must be capitalized. String is blue is because they are different types of data types
 		
@@ -22,15 +23,16 @@ public class Main {
 		
 		System.out.println(hello_world); //so when printing a variable. you include the variable name within the parenthesis. you can't have the variable under the printing function since the program reads from top to bottom
 		System.out.println(num2);
-		System.out.println(b);
+		System.out.println(v);
 		System.out.println(c);
 		System.out.println(str);
 		System.out.print(tim);
 		System.out.println();
 		
+		
 		//BASIC OPERATIONS
-		int X; 
-		X = 6; // can do this rather than int X = 6;
+		int e; 
+		e = 6; // can do this rather than int X = 6;
 		
 		int x = 5;
 		int y = 7;
@@ -48,10 +50,11 @@ public class Main {
 		System.out.println(z);
 		System.out.println();
 		
-		int a = 56 % 5; //this reminder operation (%) gives the remainder of division
+		int i = 56 % 5; //this reminder operation (%) gives the remainder of division
 		
-		System.out.println(a);
+		System.out.println(i);
 		System.out.println();
+		
 		
 		//INPUT & SCANNERS
 			// in order to get inputs you have to go to the top of the program and type import java.util.Scanner;
@@ -64,16 +67,49 @@ public class Main {
 																						// when the program is expecting a double (avoiding the crash). 
 																						//so for a String you only do String scanned = sc.next();
 																						//trying to convert the string to an int
-		boolean scanned_in = sc.nextBoolean(); //this is how to insert a boolean 
+		//boolean scanned_in = sc.nextBoolean(); //this is how to insert a boolean 
 		
 		System.out.println(w);
 						// after doing this what happened was we typed hello, and then it printed hello. so basically with sc.next() we were able to input info to the keyboard.
 						// then we stored our input into variable called scanned and printing scanned
-		System.out.println(scanned_in);
+		//System.out.println(scanned_in);
 		System.out.println();
 						// so in this case there will be 2 inputs and 2 outputs
 		
+		
 		//CONDITIONS & BOOLEANS
+		int A = 6, B = 7, C = 10; // 1 = is assigning, while == is comparing
+		//operators: >, <, ==, >=, <=, != (not equal too)
+		boolean compare = A != B; // this is gonna return a value of true or false
+		
+		System.out.println(compare); //this is print a value of true since X is < Y. which it did. so if == then its false. so != is true 
+		System.out.println();
+			
+			//Now we're going to compare strings
+		String a = "hello", b = "hellO";
+		
+		boolean comparing = a == b; //so for string the only thing we can compare is through == or !=. we can't do < > <= >=
+		System.out.println(comparing);
+		System.out.println();
+		
+			//Now we are going to compare multiple things at once
+		int X = 6, Y = 23, Z = 10;
+		
+		boolean comparison = X > Y && Z < Y; // this will compare the left operation and then compare the right operation. we do this by using && which stands for and
+		boolean Comparison = X > Y || Z < Y; // || this is or. 
+		boolean Compare = !(X > Y || Z < Y); // ! is the not operator, which basically reverses the condition. 
+		boolean compares = !(false);
+		boolean Comp = (X < Y && Y > Z) || (Z + 2 < 5 || X + 7 > y); // typically you wont see these cause they are difficult to read when seeing them. but you can combine multiple things
+		
+		System.out.println(comparison); // so since once of them is false, we get a false value. so in order for true to be printed then both have to be true. because whats is saying is if both are true then its true, or if 1 is false then both are false
+		System.out.println(); 
+		System.out.println(Comparison); // so if one of them is true then we get a value of true for the whole things. if both are false then we get a value of false
+		System.out.println();
+		System.out.println(Compare); //so if the condition is false then we get true. if the condition is true then we get false. this is checking to see it is not true
+		System.out.println();
+		System.out.println(compares); // this will result in true. 
+		System.out.println();
+		System.out.println(Comp); //this evaluates to true since we used or and one of the expressions is true 
 		
 	}
 }
