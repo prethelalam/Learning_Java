@@ -59,7 +59,7 @@ public class Main {
 		//INPUT & SCANNERS
 			// in order to get inputs you have to go to the top of the program and type import java.util.Scanner;
 		Scanner sc = new Scanner(System.in); //all this is saying is that scanner is a data type named sc. the new scanner(system.in) is typing stuff on your keyboard
-		String scanned = sc.next(); //here we are creating a new variable with a data type of a string which is called scanned. and it is going to get the next stream of input from the line above
+		String scanned = sc.nextLine(); //here we are creating a new variable with a data type of a string which is called scanned. and it is going to get the next stream of input from the line above
 		int w = Integer.parseInt(scanned); //this converts string scanned into an int. or you can do make the input an int								
 																						//so sc.next() returns as a string so we can't make it int scanned. if we want the user to input a int then we do sc.nextInt().
 																						//so if we try to type a string here it wont work cause it can't convert the string to an int
@@ -67,6 +67,7 @@ public class Main {
 																						// when the program is expecting a double (avoiding the crash). 
 																						//so for a String you only do String scanned = sc.next();
 																						//trying to convert the string to an int
+																						// so sc.next() reads until the space while sc.nextLine() reads until the end of the line
 		//boolean scanned_in = sc.nextBoolean(); //this is how to insert a boolean 
 		
 		System.out.println(w);
@@ -88,7 +89,10 @@ public class Main {
 			//Now we're going to compare strings
 		String a = "hello", b = "hellO";
 		
-		boolean comparing = a == b; //so for string the only thing we can compare is through == or !=. we can't do < > <= >=
+		boolean comparing = a == b; //so for string the only thing we can compare is through !=. we can't do < > <= >=
+									// to see if something is equal to something else you do whats below
+		scanned.equals("hello");
+		
 		System.out.println(comparing);
 		System.out.println();
 		
@@ -110,7 +114,40 @@ public class Main {
 		System.out.println(compares); // this will result in true. 
 		System.out.println();
 		System.out.println(Comp); //this evaluates to true since we used or and one of the expressions is true 
+		System.out.println();
 		
+		
+		//If, Else, Else If
+		Scanner rx = new Scanner(System.in); //so if you want to use another scanner you change the sc to something else, then must change it when it reads the line too below
+		String V = rx.nextLine();
+		
+		if (V.equals("tim")) { // this is to evaluate if the input is true. so if you type hello with only this if statement then you wont have anything appear on your system
+			System.out.println("You Typed tim");
+		} 
+		else if (V.equals("Hello")) { //this must come after an if statement and its like another if statement. so if you type Hello then hi will appear. you can have as many if statements, else must be the last thing if you if, else statements, but you aren't required to have an else statment
+			System.out.println("hi");
+		}
+		else //this has to come after an if statement or an else if statement 
+		{
+		System.out.println("Print"); //this will still be printed because it didn't go through the if statement. so if you type anything but tim or Hello then this will be printed
+		}
+		System.out.println();
+		
+		//Nested Statements and summarize what we learned
+		System.out.println("Input your age");
+		Scanner ab = new Scanner(System.in);
+		String J = ab.nextLine();
+		int age = Integer.parseInt(J); //converting string to an integer
+		
+		if (age >= 18) { 
+			System.out.println("You are an adult");
+		}
+		else if (age >= 13){
+			System.out.println("You are a teenager");
+		}
+		else {
+			System.out.println("You are not a teenager or an adult");
+		}
 	}
 }
 
@@ -136,5 +173,3 @@ public class Main {
 //INPUTS % SCANNERS
 //lets say you have int x=5 and int y=4 right. then you do the int sum = x +y. this will return as an int. but if you do int x=5 and int y=6 then do double sum = x +y. you will still get 30 but it'll be 30.0 (the value will have a decimal added to it
 //now lets say you have double x=5 and int y =6. then double sum = x +y. you will get the result as a double but like a true double since one of the values is a double
-
-//CONDITIONS & BOOLEANS
