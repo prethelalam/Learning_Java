@@ -50,7 +50,7 @@ public class Main {
 		System.out.println(z);
 		System.out.println();
 		
-		int i = 56 % 5; //this reminder operation (%) gives the remainder of division
+		int I = 56 % 5; //this reminder operation (%) gives the remainder of division
 		
 		System.out.println(i);
 		System.out.println();
@@ -140,13 +140,60 @@ public class Main {
 		int age = Integer.parseInt(J); //converting string to an integer
 		
 		if (age >= 18) { 
-			System.out.println("You are an adult");
+			System.out.println("Input your fav food");
+			String food = ab.nextLine(); //so this is going to read the line and store it in food
+			
+			if (food.equals("pizza")) { //nested if statement 
+				System.out.println("mine too");
+			}
+			else {
+				System.out.println("not mine");
+			}
 		}
 		else if (age >= 13){
 			System.out.println("You are a teenager");
 		}
 		else {
 			System.out.println("You are not a teenager or an adult");
+		}
+		System.out.println();
+		
+		
+		//Arrays: a collection of elements that is a set size. instead of a variable = 1, you have an array that have a bunch of different values in there that can index at certain points
+		String[] newArr = new String[5];
+		//data type name = new data type[how many elements or how long array is]; (you can't change this length, it is a set length). it will set all the elements to null so they don't have a value but they are going to hold something. its like intializing 5 containers that don't hold anything yet but will
+				//{"hello", "hi", "tim", "bill", "joe"} //5 values in string array. every element in the array has an index and each index will be a number that represents its position
+				//pos. 0, pos 1, pos 2, pos 3, pos 4 //position = 
+		newArr[0] = "hello";  							//this is adding stuff to an array, specifically setting a value of hello to position 0
+		newArr[1] = "hi";
+		newArr[2] = "tim";
+		newArr[3] = "bill";
+		newArr[4] = "joe";
+		
+		int[] nums = {2,3,54,6,6}; // this is another way to set an array. must faster and easier than individually doing it 
+		
+		double[] nums2 = {2.0, 3.0};
+		
+		String I = newArr[4]; // so the newArr takes the 2nd value in the array. if you commented newArr[4] then ran the program. null will be the output because there is not a value in the position yet
+		System.out.println(I);
+		System.out.println();
+		
+		int G = nums[4];
+		System.out.println(G);
+		System.out.println();
+		
+		double H = nums2[1];
+		System.out.println(H);
+		System.out.println();
+		
+		//For loops: this allows you to automate a task and do something a set amount of times. usually use it because you know how long you want to do something
+		int F = 0;
+			//F += 1; can do this but its tedious
+			//F += 2; can do this but its tedious
+		for (int i = 0; i <=10; i++) { //put usually use i in this case
+		//declaring i = 0, we do this while i is <= 10 (condition) , and then add 1 to i after an execution (increment). we keep doing this until i is 11 then we break out of the loop
+			System.out.println(i); 
+			
 		}
 	}
 }
