@@ -9,6 +9,7 @@ public class Main {
 		 //INTRODUCTION SECTION
 		System.out.println("Hello World!");
 		System.out.println("Hellow world 2"); 
+		System.out.println("end introduction section ");
 		System.out.println(); //this is how to print a blank line or a space
 	
 		
@@ -27,6 +28,7 @@ public class Main {
 		System.out.println(c);
 		System.out.println(str);
 		System.out.print(tim);
+		System.out.println("end variable and input data types");
 		System.out.println();
 		
 		
@@ -50,9 +52,10 @@ public class Main {
 		System.out.println(z);
 		System.out.println();
 		
-		int I = 56 % 5; //this reminder operation (%) gives the remainder of division
+		int k = 56 % 5; //this reminder operation (%) gives the remainder of division
 		
-		System.out.println(i);
+		System.out.println(k);
+		System.out.println("end basic operations");
 		System.out.println();
 		
 		
@@ -68,12 +71,15 @@ public class Main {
 																						//so for a String you only do String scanned = sc.next();
 																						//trying to convert the string to an int
 																						// so sc.next() reads until the space while sc.nextLine() reads until the end of the line
-		//boolean scanned_in = sc.nextBoolean(); //this is how to insert a boolean 
+
+		System.out.println();
 		
+		//boolean scanned_in = sc.nextBoolean(); //this is how to insert a boolean 
 		System.out.println(w);
 						// after doing this what happened was we typed hello, and then it printed hello. so basically with sc.next() we were able to input info to the keyboard.
 						// then we stored our input into variable called scanned and printing scanned
 		//System.out.println(scanned_in);
+		System.out.println("end booleans + input and scanners");
 		System.out.println();
 						// so in this case there will be 2 inputs and 2 outputs
 		
@@ -114,6 +120,7 @@ public class Main {
 		System.out.println(compares); // this will result in true. 
 		System.out.println();
 		System.out.println(Comp); //this evaluates to true since we used or and one of the expressions is true 
+		System.out.println("end conditions and booleans");
 		System.out.println();
 		
 		
@@ -131,6 +138,7 @@ public class Main {
 		{
 		System.out.println("Print"); //this will still be printed because it didn't go through the if statement. so if you type anything but tim or Hello then this will be printed
 		}
+		System.out.println("end if, else, else if statements");
 		System.out.println();
 		
 		//Nested Statements and summarize what we learned
@@ -156,6 +164,7 @@ public class Main {
 		else {
 			System.out.println("You are not a teenager or an adult");
 		}
+		System.out.println("end nested statements and summarization");
 		System.out.println();
 		
 		
@@ -184,19 +193,54 @@ public class Main {
 		
 		double H = nums2[1];
 		System.out.println(H);
+		System.out.println("end arrays");
 		System.out.println();
 		
-		//For loops: this allows you to automate a task and do something a set amount of times. usually use it because you know how long you want to do something
+		//For loops and for each loops: this allows you to automate a task and do something a set amount of times. usually use it because you know how long you want to do something
 		int F = 0;
 			//F += 1; can do this but its tedious
 			//F += 2; can do this but its tedious
-		for (int i = 0; i <=10; i++) { //put usually use i in this case
+		//for (int i = 0; i <= 10; i++) { //put usually use i in this case
 		//declaring i = 0, we do this while i is <= 10 (condition) , and then add 1 to i after an execution (increment). we keep doing this until i is 11 then we break out of the loop
-			System.out.println(i); 
+			//System.out.println(i);  //this will print 0 - 10 then stop. so it will print 0, then check the condition, then if it still is valid then it will print 1, etc..
+			System.out.println();
 			
+			
+		//can also do int x = 5;. then do q += x;. or even do it for the condition as well
+		//for (int q = 0; q <= 10; q+=5) { //q +=5 means that it will start at 0 then inc by 5 until reaching 10 or meeting the condition
+			//System.out.println(q);
+		//}
+			int [] arr = {1,5,7,3,4,5};
+		//for (int p = 0; p < arr.length; p++) { //in order to get the length of the array and you don't know how many elements they types you make the condition p < arr.length
+			//if (arr[p] == 5) {
+				//System.out.println("Found a 5 at index " + p); //this prints twice because there are 2 5's
+														//the = p means that it will automatically convert it as a string and print where the number (5) was found
+			//this is a simple way to look through a list and find a certain value
+			//}
+			
+			
+			//this is known as a for each
+			int count = 0; //this is an outside counter variable
+			for (int element:arr) {//so every time we loop through this loop, we will declare a new variable called element and it will be = to the next element in our array. so our 1st loop its = to 1, then 5, then 7, etc
+				System.out.println(element + " index " + count); //this will print the list of the array
+				count++; //so count will keep a track of the index of the indexes
+			}
+			//populating an array with a for loop
+			String [] names = new String[5]; // array is on line 213
+			Scanner ew = new Scanner(System.in);
+			
+			for (int p = 0; p < names.length; p++) {
+				System.out.print("input: "); //taking in input
+				String input = ew.nextLine(); //so every time we run the loop we get an input from the user 
+				names[p] = input; //this is adding the users input into the array. the value of the array is = to whatever we typed in
+			}
+			for (String n:names) { //for each loop
+				System.out.println(n);
+			}
 		}
-	}
-}
+		}
+	//}
+//}
 
 //NOTES:
 
