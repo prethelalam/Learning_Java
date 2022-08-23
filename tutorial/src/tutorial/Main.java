@@ -223,14 +223,14 @@ public class Main {
 			int count = 0; //this is an outside counter variable
 			for (int element:arr) {//so every time we loop through this loop, we will declare a new variable called element and it will be = to the next element in our array. so our 1st loop its = to 1, then 5, then 7, etc
 				System.out.println(element + " index " + count); //this will print the list of the array
-				count++; //so count will keep a track of the index of the indexes
+				count++; //so count will keep a track of the elements of the indexes
 			}
 			//populating an array with a for loop
 			String [] names = new String[5]; // array is on line 213
 			Scanner ew = new Scanner(System.in);
 			
 			for (int p = 0; p < names.length; p++) {
-				System.out.print("input: "); //taking in input
+				System.out.print("input: "); //taking in input. so print will just print the line but not move the cursor to a new line
 				String input = ew.nextLine(); //so every time we run the loop we get an input from the user 
 				names[p] = input; //this is adding the users input into the array. the value of the array is = to whatever we typed in
 			}
