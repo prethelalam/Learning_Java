@@ -236,6 +236,7 @@ public class Main {
 			}
 			for (String n:names) { //for each loop
 				System.out.println(n);
+				System.out.println();
 				
 			}
 		}
