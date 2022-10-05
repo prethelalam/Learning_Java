@@ -1,5 +1,7 @@
 //package Intro;
+import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Set;
 
 public class Intro {
 
@@ -242,39 +244,77 @@ public class Intro {
 			for (String n:names) { //for each loop
 				System.out.println(n);
 				System.out.println();
-			}
+            }
+    }
+
+    static void WhileLoops(){//this is an infinite loop or based on user input
+        Scanner sc = new Scanner(System.in);
+        int x;
+
+        // int count = 0;
+        // while (x != 10){ //we made a while loop that keeps happening until you type the number 10 at which the loop will break
+        //     System.out.println("type 10...");
+        //     System.out.print("type a number: ");
+        //     x = sc.nextInt();
+        //     count++; 
+        
+        //System.out.println("you tired " + count + " times"); //so here we are inputting how many times you tired to put in the number 10. which is where the count comes into play
+
+        //so lines 255 - 258 are kinda redundant to have. so instead were going to set up a do while loop
+
+        do { //so we set up this do loop to reduce redunancy for writing code
+            System.out.print("type a number: ");
+            x = sc.nextInt();
+        } while (x != 10);
+    }
+
+    static void SetsLists(){
+        //a set is a collection of unordered elements that are unique. they cant contain the same element twice and it does not know where that element exists.
+        Set<Integer> t = new HashSet<Integer>(); //this is an integer set named t. a hashset is the standard implmentation of a set
+        //you can put a set into another set by making the new set adn putting it in the ()
+        t.add(5);
+        t.add(7);
+        t.add(9);
+        t.add(5); //this 5 wont be printed since its already in the same
+
+        System.out.println(t); 
     }
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 		 //INTRODUCTION SECTION
-		Introduction();
+		// Introduction();
 	
-		//VARIABLE AND DATA TYPES
-		VariablesDataTypes();
+		// //VARIABLE AND DATA TYPES
+		// VariablesDataTypes();
 	
-		//BASIC OPERATIONS
-		BasicOperations();
+		// //BASIC OPERATIONS
+		// BasicOperations();
 		
-		//INPUT & SCANNERS
-		InputScanners();
+		// //INPUT & SCANNERS
+		// InputScanners();
 		
-		//CONDITIONS & BOOLEANS
-		ConditionsBooleans();
+		// //CONDITIONS & BOOLEANS
+		// ConditionsBooleans();
 		
-		//If, Else, Else If
-		ifElseStatements();
+		// //If, Else, Else If
+		// ifElseStatements();
 		
-		//Nested Statements and summarize what we learned
-		NestedStatements();
+		// //Nested Statements and summarize what we learned
+		// NestedStatements();
 		
-        //Arrays
-        Arrays();
+        // //Arrays
+        // Arrays();
         
-        //For loops and for each loops
-        ForLoopsWithArrays();
-		
+        // //For loops and for each loops
+        // ForLoopsWithArrays();
+        
+        //While loops
+        //WhileLoops();
+
+        //Sets and lists
+        SetsLists();
 		}
 		}
 
