@@ -330,6 +330,9 @@ public class Intro {
         System.out.println(n.subList(1,3)); //answer is 5,1 becasue you get infromation from index 1 to 3. but not 3
 
         LinkedList<Integer> N = new LinkedList<Integer>(); //this is faster at certain operations compared to an arraylist
+    }
+
+    static void MapsHashMaps(){
 
     }
 
@@ -367,7 +370,10 @@ public class Intro {
         //WhileLoops();
 
         //Sets and lists
-        SetsLists();
+        //SetsLists();
+
+        //Maps and HashMaps
+        MapsHashMaps();
 		}
 		}
 
