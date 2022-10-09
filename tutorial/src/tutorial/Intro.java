@@ -1,7 +1,11 @@
 //package Intro;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.LinkedList;
 import java.util.Scanner;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class Intro {
 
@@ -276,8 +280,57 @@ public class Intro {
         t.add(7);
         t.add(9);
         t.add(5); //this 5 wont be printed since its already in the same
+        t.add(-8); //so this output ends up being 5, 7, -8, 9 so there is no specfic order. we just know these values exist
+
+        //this is to check if there is an element in a set
+        boolean x = t.contains(5);
+
+        //to remove an element from a set
+        //t.remove(9);
+        //t.clear(); //this clears the entire set
+        t.isEmpty(); //this checks to see if the set is empty or not. can put a boolean to get the value or true or false
+        t.size(); //thisi s the length of the set
+
+        int y = t.size();
+        System.out.println(y);
 
         System.out.println(t); 
+        System.out.println(x);
+
+        //this is a tree set. this is similar to a hash set. but it is ordered in a tree data structure
+        Set<Integer> T = new TreeSet<Integer>();
+        
+        T.add(3);
+        T.add(1);
+        T.add(54);
+        T.add(3);
+
+        System.out.println(T);
+
+        Set<Integer> w = new LinkedHashSet<Integer>(); //this is a linked hashset. this is similar to a basic set but its faster than certain operations
+        w.add(4);
+        w.add(-8);
+        w.add(5);
+        w.add(3);
+
+        System.out.println(w);
+
+        //lists - its like an array but slower and can add/remove things to it
+        ArrayList<Integer> n = new ArrayList<Integer>();
+        n.add(1); //use the same syntax as a set. so n.size, n.empty, etcc
+        n.add(2);
+        n.add(1);
+        n.add(2);
+        n.add(1);
+        n.add(2);
+        n.get(0); //you can index something, so this would give you 1 cause 1 is at index 0
+        n.set(1, 5); //this makes index 1 = 5 (so it will change the value of index to what you set it to)
+        n.subList(1, 3); //this lets you get within a certain range
+
+        System.out.println(n.subList(1,3)); //answer is 5,1 becasue you get infromation from index 1 to 3. but not 3
+
+        LinkedList<Integer> N = new LinkedList<Integer>(); //this is faster at certain operations compared to an arraylist
+
     }
 
 	public static void main(String[] args) {
