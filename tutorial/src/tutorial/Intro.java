@@ -1,10 +1,14 @@
 //package Intro;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
+import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
+import java.util.TreeMap;
 import java.util.TreeSet;
 
 public class Intro {
@@ -329,11 +333,59 @@ public class Intro {
 
         System.out.println(n.subList(1,3)); //answer is 5,1 becasue you get infromation from index 1 to 3. but not 3
 
-        LinkedList<Integer> N = new LinkedList<Integer>(); //this is faster at certain operations compared to an arraylist
+        LinkedList<Integer> N = new LinkedList<Integer>(); //this is faster at certain operations compared to an arraylist. its kind of like a tree set
     }
 
     static void MapsHashMaps(){
+        //maps are like dictionaries. this is a key value pair
+        Map m = new HashMap(); //to create a hash map. this does not retain an order, so it contains unique elements. it also overrides a key (cant have 2 of the same keys in the mao but can have existing values). it is in no order which is what makes it so fast
 
+        //a map is a key value pair. its similar to a list and array and you can index them but by keys (keys can be a string, a number, a char, a float). this key links you to a value
+        m.put("tim",5); //tim leads to the value of 5
+        m.put("joe","x");
+        m.put(11,999);
+        //this is a fast data set that happens in constant time (when it comes to add, removing, etc)
+
+        System.out.println(m); //this will print tim = 5
+        System.out.println(m.get("tim")); //while this will print the specfic value that is linked to tim.
+
+        System.out.println(m.containsValue("b")); //this is going to check if the value in the map exists (the value between the ())
+        System.out.println(m.containsKey("tim")); //this will check if this key exists. this is more useful 
+
+        System.out.println(m.get(5));// this gives you a null value because the key 5 does not exist
+
+        System.out.println(m.values()); //this just prints the value in no particular order 
+
+        //in order to clear the map you must write whats below then print m
+        m.clear();
+
+        m.isEmpty(); //this will tell you if a map is empty or is not empty
+
+        System.out.println(m);
+    }
+
+    static void TreeMaps(){
+        Map m = new TreeMap(); //when using a tree map, the keys have to be the same data type
+        
+        m.put("tim", 5);
+        m.put("joe","x"); //joe is printed before tim because j is before t
+        m.put("a","b"); //now a comes first because its the first letter in alphabet. notice how they are all strings 
+
+        System.out.println(m);
+    }
+
+    static void LinkedMaps(){
+        Map m = new LinkedHashMap(); //this is similar to a list. as it keeps things in thee same order as you addd to it
+        
+        m.put("tim", 5);
+        m.put("joe","x"); 
+        m.put("a","b"); 
+
+        System.out.println(m);
+    }
+
+    static void MapsExamples(){
+        //do another problem where you make a map with a bunch of values and try to count how many times each value appears
     }
 
 	public static void main(String[] args) {
@@ -373,7 +425,10 @@ public class Intro {
         //SetsLists();
 
         //Maps and HashMaps
-        MapsHashMaps();
+        //MapsHashMaps();
+        //TreeMaps();
+        //LinkedMaps();
+        MapsExamples();
 		}
 		}
 
