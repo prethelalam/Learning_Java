@@ -1,5 +1,6 @@
 //package Intro;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedHashMap;
@@ -384,11 +385,48 @@ public class Intro {
         System.out.println(m);
     }
 
-    static void MapsExamples(){
+    static void MapsExample1(){
         //do another problem where you make a map with a bunch of values and try to count how many times each value appears
+
+        Map m = new HashMap();
+        String str = "hello my name is tim and I am cool";
+
+        for(char x:str.toCharArray()) { //the .tochararray, makes everything character into a character array
+            if (m.containsKey(x)){
+                int old = (int)m.get(x);
+                m.put(x, old+1); //this is to see if the key exists and we put it into old. if the key exists then we get the previous count and add 1 to it and override it
+            }else{
+                m.put(x, 1); //this is if the letter x isn't in the map. and it will have a value of 1
+            }
+            m.remove(' '); //to remove an element is  you put in parathesis what you what to remove
+        }
+        System.out.println(m);
     }
 
-	public static void main(String[] args) {
+    static void MapsExample2(){
+        int[] x = {-99,5,6,3,2,1,7,8,0}; //this is an array we created adn we are going to sort this
+
+        Arrays.sort(x, 1, 7); //this is sorting from index 1 to 6 (cause it doesn't include 7)
+
+        for(int i:x){
+            System.out.print(i + ","); //this sort that section
+        }
+    }
+
+    static void objects(){
+        //object is an instance of a certain data type or classes
+        Scanner sc = new Scanner(System.in); //here we are creating an instance by having sc point to a scanner object
+        sc.next();
+        int x = 5; //here we are saying that an int x is equal to an int object of the value 5. this object lets you have different properties for different data types. when creating a new variable, we are equaling the data type name to equal an object value
+    }
+    static void methods(){ //this is an actual method that you created
+        //method is anything you call on an object or an instance of an object. 
+        //so an instance is when youre like creaing a vairable such as scanner sc = new scanner(system.in) this means youre creating sc as a scanner object or you can say that sc is a new instance of the type scanner. when you call the .next() method. you are pointing to the scanner object which is using the method. a method is anyhting that is like a .
+        String h = "hello";
+        h.length(); //this is a method that returns the length of the string. this works on the object h. but it wouldnt work if you did sc.length because this length method is not defined for the scanner type 
+    }
+
+	public static void main(String[] args) { //this is a method that automatically runs. a method is anythign that sits inside the calss
 		// TODO Auto-generated method stub
 		
 		 //INTRODUCTION SECTION
@@ -428,9 +466,20 @@ public class Intro {
         //MapsHashMaps();
         //TreeMaps();
         //LinkedMaps();
-        MapsExamples();
-		}
-		}
+        //MapsExample1();
+        //MapsExample2();
+
+        //Objects
+        objects();
+
+        //Methods
+        //a class defined a data type
+
+        }
+        public static void tim(){ //this void mean we arent returning anything but just printing
+            System.out.println("tim!"); // you created a static method that you can call anywhere from inside and outside the class
+        }
+        }
 
 //NOTES:
 
