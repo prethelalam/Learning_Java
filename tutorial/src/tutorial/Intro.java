@@ -470,16 +470,35 @@ public class Intro {
         //MapsExample2();
 
         //Objects
-        objects();
+        //objects(); 
 
         //Methods
         //a class defined a data type
+        // tim("whats up guys!", 4); //here we have to input a string. this "whats up guys" is an arguement (this goes with line 481)
 
+        // System.out.println(add2(6)); //here were calling add2 method, the argument is 6. so x = 6. and we will return 8. this goes with line 489
+
+        // System.out.println((str("hi"))); //this goes with line 493
+        // }
+        // public static void tim(String str, int x){ //this void mean we arent returning anything but just printing. so here we passed in string str, which means that anytime i call this method then i need to pass in a string. you can also put multiple parameters 
+        //     for (int i=0; i< x; i++){ //here we printing the string 4 times with this for loop
+        //          System.out.println(str); // you created a static method that you can call anywhere from inside and outside the class. here we put str which is the variable name. str is a parameter of the type string, and when we call this functionw we have to type in an argument. an argument is what the parameter is going to be when we get to the method.
+        //     }
+        // }
+        
+        // public static int add2(int x){ //here we have to return a value becasue we have int
+        //     return x + 2;
+        // }
+
+        // public static String str(String y){
+        //     return y + "!";
+        // }
+
+        //Classes
+        //so in order to make a class, you make a new file. and we made one called dog 
+        // a class is a data type so if we make an instance of a class so an object of a certain type. were jsut using all the infor for the class to make an object. it is like a blueprint for an object 
         }
-        public static void tim(){ //this void mean we arent returning anything but just printing
-            System.out.println("tim!"); // you created a static method that you can call anywhere from inside and outside the class
-        }
-        }
+    }
 
 //NOTES:
 
