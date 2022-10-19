@@ -497,6 +497,17 @@ public class Intro {
         //Classes
         //so in order to make a class, you make a new file. and we made one called dog 
         // a class is a data type so if we make an instance of a class so an object of a certain type. were jsut using all the infor for the class to make an object. it is like a blueprint for an object 
+
+        dog tim = new dog("tim", 4); //we created an instance named tim and it referenced the dog object
+        tim.speak();
+
+        dog bill = new dog("bill", 7); //we created an instance named tim and it referenced the dog object
+        bill.speak();
+
+        dog bob = new dog("bob", 11); //we created an instance named tim and it referenced the dog object
+        bob.speak();
+
+        tim.speak(); //notice this prints out the same values for tim that is stored. we can hold unique values for each of our instances and have an infinite amount
         }
     }
 
